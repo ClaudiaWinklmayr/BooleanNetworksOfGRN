@@ -1,0 +1,11 @@
+{"IDs":["A", "B", "C", "T", "X", "Y", "Z"], 
+ "Connections": {"A":["B","C"], "B":["A","C"], "C":["A", "B"], "T":["A", "X"], 
+                 "X":["Y", "Z"], "Y":["X", "Z"], "Z":["X","Y"]},  
+ "Updates": {"A":"lambda b,c:int(b and c)",
+             "B":"lambda a,c:int(a or c)",
+             "C":"lambda a,b:int(a^b)",
+             "T":"lambda a,x:int(a and x)", 
+             "X":"lambda y,z:int(y and not(z))", 
+             "Y":"lambda x,z:int(not(x) and z)", 
+             "Z":"lambda x,y: int(x^y)"}, 
+ "Positions":{"A":[-0.25, 0.5], "B":[-1,1], "C":[-0.5, 1], "T":[0,0], "X":[0.25,0.5], "Y":[0.5,1], "Z":[1,1]}}

@@ -1,0 +1,7 @@
+{"IDs":["W", "X", "Y", "Z"], 
+ "Connections": {"W":["W"], "X":["X"], "Y":["Y"], "Z":["W","X","Y"]},  
+ "Updates": {"W":"lambda w:int(w)", 
+             "X":"lambda x:int(x)", 
+             "Y":"lambda y:int(y)", 
+             "Z":"lambda w,x,y: int(w or (x ^ y))"}, 
+ "Positions":{"X":[0,1], "Y":[0.5,1], "Z":[1,0], "W":[0,-1]}}

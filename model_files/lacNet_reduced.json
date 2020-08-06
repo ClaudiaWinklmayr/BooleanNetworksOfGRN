@@ -1,0 +1,8 @@
+{"IDs": ["M", "L","Lm", "Ge", "Le", "Lem"], 
+"Connections": {"M": ["Ge", "L", "Lm"],  "L": ["M", "Le", "Ge"],  "Lm": ["Lem", "M", "Le", "Ge"], "Ge": ["Ge"], "Le": ["Le"], "Lem":["Lem"]}, 
+"Updates": {"M": "lambda ge, l,  lm: int(not(ge) and (l or lm))", 
+            "L": "lambda m, le, ge: int((m and le) and not(ge))",
+            "Lm": "lambda lem, m,  le, ge: int(((lem and m)or le) and not(ge))",
+            "Ge": "lambda ge:ge", 
+            "Le": "lambda le:le", 
+            "Lem": "lambda lem:lem"}}
